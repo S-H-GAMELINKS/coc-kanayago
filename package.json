@@ -1,0 +1,51 @@
+{
+  "name": "coc-kanayago",
+  "version": "0.1.0",
+  "description": "coc.nvim extension for Kanayago Language Server Protocol.",
+  "author": "S-H-GAMELINKS <gamelinks007@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "coc.nvim"
+  ],
+  "engines": {
+    "coc": "^0.0.82"
+  },
+  "scripts": {
+    "watch": "node esbuild.mjs --watch",
+    "build": "node esbuild.mjs",
+    "prepare": "node esbuild.mjs"
+  },
+  "devDependencies": {
+    "coc.nvim": "^0.0.83-next.18",
+    "esbuild": "^0.19.8",
+    "typescript": "^5.3.3"
+  },
+  "activationEvents": [
+    "onLanguage:ruby"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "coc-kanayago configuration",
+      "properties": {
+        "coc-kanayago.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable coc-kanayago extension"
+        },
+        "coc-kanayago.command": {
+          "type": "string",
+          "default": "kanayago",
+          "description": "Path to kanayago executable"
+        },
+        "coc-kanayago.trace.server": {
+          "type": "string",
+          "default": "off",
+          "enum": ["off", "messages", "verbose"],
+          "description": "Traces the communication between coc.nvim and the language server"
+        }
+      }
+    }
+  }
+}
