@@ -6,7 +6,23 @@
   "license": "MIT",
   "main": "lib/index.js",
   "keywords": [
-    "coc.nvim"
+    "coc.nvim",
+    "ruby",
+    "language-server"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/S-H-GAMELINKS/coc-kanayago.git"
+  },
+  "bugs": {
+    "url": "https://github.com/S-H-GAMELINKS/coc-kanayago/issues"
+  },
+  "homepage": "https://github.com/S-H-GAMELINKS/coc-kanayago",
+  "files": [
+    "lib",
+    "package.json",
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
     "coc": "^0.0.82"
